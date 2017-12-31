@@ -1,0 +1,15 @@
+body {
+  padding: 50px;
+  padding-top: 80px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+h1 {
+  color: #00B7FF; }
+
+.btn + .btn {
+  margin-left: 3px; }
+
+span.wrap-block {
+  width: 100%;
+  word-wrap: break-word;
+  display: inline-block; }
