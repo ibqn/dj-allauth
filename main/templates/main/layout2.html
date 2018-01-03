@@ -22,22 +22,24 @@
     <div class="bg"></div>
 
     <div class="container">
+      {% block header %}
       <header class="header clearfix">
         <nav>
           <ul class="nav nav-pills float-right">
             <li class="nav-item">
-              <a class="nav-link active" href="/main">Home <span class="sr-only">(current)</span></a>
+              <a class="nav-link {% if nav_link == 'home' %}active{% endif %}" href="/main">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">About</a>
+              <a class="nav-link {% if nav_link == 'about' %}active{% endif %}" href="/about">About</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/auth/login">Login</a>
+              <a class="nav-link {% if nav_link == 'login' %}active{% endif %}" href="/auth/login">Login</a>
             </li>
           </ul>
         </nav>
         <a class="logo"></a>
       </header>
+      {% endblock header %}
 
       <main role="main">
         {% block main %}{% endblock %}
