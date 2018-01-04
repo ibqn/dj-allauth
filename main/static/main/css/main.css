@@ -16,6 +16,20 @@ body {
   background-size: cover;
 }
 
+.border-between > [class*='col']:before {
+  background: rgb(54, 69, 109);
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: absolute;
+  width: 2px;
+  top: 0;
+}
+
+.border-between > [class*='col']:first-child:before {
+  display: none;
+}
+
 .signin {
   /* text-align: center; */
   margin-bottom: 2rem;
