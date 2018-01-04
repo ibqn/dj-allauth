@@ -15,6 +15,11 @@
       integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
       crossorigin="anonymous">
 
+    <script defer src="//use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
+    <script src="//code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g="
+      crossorigin="anonymous"></script>
+
     <link href="{% static 'main/css/main.css' %}" rel="stylesheet">
   </head>
 
@@ -32,9 +37,11 @@
             <li class="nav-item">
               <a class="nav-link {% if nav_link == 'about' %}active{% endif %}" href="/about">About</a>
             </li>
+            {% block sign_inup %}
             <li class="nav-item">
               <a class="nav-link {% if nav_link == 'login' %}active{% endif %}" href="/auth/login">Login</a>
             </li>
+            {% endblock sign_inup %}
           </ul>
         </nav>
         <a class="logo"></a>
@@ -45,7 +52,12 @@
         {% block main %}{% endblock %}
       </main>
 
-      {% block footer %}{% endblock %}
+      {% block footer %}
+        <footer class="footer">
+          <p>&copy; Company 2018</p>
+        </footer>
+      {% endblock %}
+
     </div>
   </body>
 </html>
