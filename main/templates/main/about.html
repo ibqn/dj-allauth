@@ -1,0 +1,9 @@
+{% extends "main/layout2.html" %}
+
+{% block header %}
+  {% with nav_link="about" %} {{ block.super }} {% endwith %}
+{% endblock %}
+
+{% block main %}
+  <h1>About</h1>
+{% endblock %}

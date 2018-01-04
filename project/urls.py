@@ -18,13 +18,17 @@ from django.urls import(
     path,
     include,
 )
-from main.views import IndexPageView
-from main.views import MainPageView
+from main.views import(
+    IndexPageView,
+    AboutPageView,
+    MainPageView,
+)
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', IndexPageView.as_view(), name='index'),
     path('main', MainPageView.as_view(), name='main'),
+    path('about', AboutPageView.as_view(), name='about'),
     path('auth/', include('allauth.urls')),
 ]
